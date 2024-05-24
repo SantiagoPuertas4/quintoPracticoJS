@@ -23,7 +23,7 @@ $btnGenerar.addEventListener("click", () => {
   $btnEnviar.classList.remove("d-none");
   $formCompleto.classList.remove("d-none");
 
-  $p.textContent = "Numero Magico Generado";
+  $p.textContent = "Numero magico generado";
   $p.classList.add("mt-3", "px-3");
   if (!generado) {
     $infoJuego.appendChild($p);
