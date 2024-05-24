@@ -1,0 +1,19 @@
+body {
+  background-image: url(https://www.mactualidad.com/wp-content/uploads/2014/07/smooth-ivy-2048x1280.jpg);
+  object-fit: cover;
+}
+
+h1 {
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+}
+
+.menu {
+  background-color: rgb(221, 221, 221);
+  border-radius: 4px;
+}
+
+.br-4 {
+  border-radius: 4px;
+}
