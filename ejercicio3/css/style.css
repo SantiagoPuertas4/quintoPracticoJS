@@ -1,0 +1,12 @@
+#listaTareas {
+  color: black !important;
+  border: none;
+}
+
+h2 {
+  font-size: larger;
+}
+
+.prueba {
+  flex: 1 1 auto;
+}

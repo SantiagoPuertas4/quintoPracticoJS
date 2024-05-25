@@ -14,7 +14,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="../common.css" />
     <title>Generaciones</title>
   </head>
@@ -24,7 +23,10 @@
         <h1 class="px-2 py-1">Generaciones</h1>
       </div>
       <div class="menu w-75">
-        <form class="d-flex px-3 justify-content-center flex-column" id="formCompleto">
+        <form
+          class="d-flex px-3 justify-content-center flex-column"
+          id="formCompleto"
+        >
           <fieldset>
             <label for="inputNombre" class="form-label"></label>
             <input
@@ -89,33 +91,38 @@
         </form>
         <div class="d-flex justify-content-center column-gap-3 flex-wrap">
           <button
-          type="submit"
-          class="br-4 btn btn-secondary my-2 mt-3"
-          id="btnGeneracion" disabled
-        >
-          Mostrar generacion
-        </button>
-        <button
-          type="submit"
-          class="br-4 btn btn-secondary my-2 mt-3"
-          id="btnMayor" disabled
-        >
-          Mayor de edad
-        </button>
-        <button
-          type="submit"
-          class="br-4 btn btn-secondary my-2 mt-3"
-          id="btnDatos" disabled
-        >
-          Mostrar datos
-        </button>
-        <button
-          type="submit"
-          class="br-4 btn btn-secondary my-2 mt-3 btn-danger"
-          id="btnBorrado" disabled
-        >
-          Borrar persona
-        </button>
+            type="submit"
+            class="br-4 btn btn-secondary my-2 mt-3"
+            id="btnGeneracion"
+            disabled
+          >
+            Mostrar generacion
+          </button>
+          <button
+            type="submit"
+            class="br-4 btn btn-secondary my-2 mt-3"
+            id="btnMayor"
+            disabled
+          >
+            Mayor de edad
+          </button>
+          <button
+            type="submit"
+            class="br-4 btn btn-secondary my-2 mt-3"
+            id="btnDatos"
+            disabled
+          >
+            Mostrar datos
+          </button>
+          <button
+            type="submit"
+            class="br-4 btn btn-secondary my-2 mt-3 btn-danger"
+            id="btnBorrado"
+            disabled
+          >
+            Borrar persona
+          </button>
+        </div>
       </div>
     </main>
     <script type="module" src="./js/app.js"></script>

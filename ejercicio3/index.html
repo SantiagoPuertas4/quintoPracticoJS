@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../common.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Lista de tareas</title>
+  </head>
+  <body>
+    <main class="d-flex flex-column align-items-center mt-5">
+      <div>
+        <h1 class="px-2 py-1">Lista de tareas</h1>
+      </div>
+      <div class="w-75 menu mt-4 p-2 d-flex flex-column">
+        <form id="formCompleto">
+          <fieldset class="d-flex flex-column px-3">
+            <label for="inputTarea" class="form-label align-self-center pt-3"
+              >Tarea</label
+            >
+            <textarea
+              name="inputTarea"
+              id="inputTarea"
+              class="br-4 form-control br-4"
+              rows="5"
+              placeholder="Ingresa aqui la tarea (10 a 500 caracteres)"
+            ></textarea>
+          </fieldset>
+          <div
+            class="d-flex justify-content-center pt-2 column-gap-3 flex-wrap"
+          >
+            <button
+              type="submit"
+              class="br-4 btn btn-secondary my-2 mt-3 btn-success"
+              id="btnEnviar"
+            >
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="menu d-flex mt-3 w-75 flex-column align-items-center">
+        <div class="align-self-center">
+          <h1 id="listaTareas">Lista de tareas</h1>
+        </div>
+        <table class="table table-striped table-hover table-bordered mx-5">
+          <thead>
+            <tr>
+              <th scope="col">Tarea</th>
+              <th scope="col">Opciones</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <tr>
+              <td>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit
+                  voluptatum architecto alias quae, est ex.
+                </p>
+              </td>
+              <td class="d-flex column-gap-1 flex-wrap">
+                <button class="br-4 btn my-2 mt-3 btn-danger" id="btnEliminar">
+                  Eliminar
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
