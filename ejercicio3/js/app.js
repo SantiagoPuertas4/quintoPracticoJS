@@ -5,10 +5,8 @@ import {
   validacionTarea,
   limpiarInput,
   cargarTabla,
-  eliminarContacto,
+  agregarTarea,
 } from "./utils.js";
-
-let conjuntoTareas = [];
 
 const $inputTarea = document.querySelector("#inputTarea");
 const $btnEnviar = document.querySelector("#btnEnviar");
@@ -31,10 +29,10 @@ $btnEnviar.addEventListener("click", (event) => {
   limpiarInput($inputTarea);
 
   const tarea = new Tarea($inputTarea.value);
-  conjuntoTareas.push(tarea);
+  agregarTarea(tarea);
   $formCompleto.reset();
 
-  cargarTabla(conjuntoTareas, $tableBody);
+  cargarTabla($tableBody);
 });
 
-$btnEliminar.onclick = () => eliminarContacto(tarea.codigo);
+cargarTabla($tableBody);

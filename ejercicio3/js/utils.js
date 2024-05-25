@@ -34,7 +34,20 @@ const invalidInput = ($input) => {
   $input.classList.remove("is-valid");
 };
 
-export const cargarTabla = (arreglo, $table) => {
+export const obtenerTareasDeLS = () => {
+  return JSON.parse(localStorage.getItem("tareas")) || [];
+};
+
+export const agregarTarea = (tarea) => {
+  const tareas = obtenerTareasDeLS();
+
+  tareas.push(tarea);
+
+  localStorage.setItem("tareas", JSON.stringify(tareas));
+};
+
+export const cargarTabla = ($table) => {
+  const arreglo = obtenerTareasDeLS();
   let tamanio = arreglo.length;
 
   $table.textContent = "";
@@ -54,6 +67,10 @@ export const cargarTabla = (arreglo, $table) => {
     $btnEliminar.id = "btnEliminar";
     $btnEliminar.classList.add("br-4", "btn", "my-3", "mt-3", "btn-danger");
     $btnEliminar.textContent = "Eliminar";
+    $btnEliminar.onclick = () => {
+      eliminarTarea(arreglo[i].codigo);
+      cargarTabla($table);
+    };
     $tdBoton.appendChild($btnEliminar);
 
     $tr.appendChild($tdTarea);
@@ -63,6 +80,10 @@ export const cargarTabla = (arreglo, $table) => {
   }
 };
 
-export const eliminarContacto = (codigo) => {
-  alert("Eliminando el contacto");
+const eliminarTarea = (codigo) => {
+  const tareas = obtenerTareasDeLS();
+  const nuevasTareas = tareas.filter((tarea) => {
+    return tarea.codigo !== codigo;
+  });
+  localStorage.setItem("tareas", JSON.stringify(nuevasTareas));
 };
