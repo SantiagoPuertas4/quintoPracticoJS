@@ -4,7 +4,7 @@ export const validacionTarea = ($input) => {
     return false;
   }
 
-  if ($input.value.trim().length < 5 || $input.value.trim().length > 250) {
+  if ($input.value.trim().length < 1 || $input.value.trim().length > 2000) {
     invalidInput($input);
     return false;
   }
