@@ -19,7 +19,7 @@ const $segundoCronometro = document.querySelector("#segundoCronometro");
 const $centesimaCronometro = document.querySelector("#centesimaCronometro");
 
 $btnIniciar.addEventListener("click", () => {
-  intervaloActualizacion = setInterval(cronometro, 10);
+  intervaloActualizacion = setInterval(cronometro, 1);
   $btnIniciar.disabled = true;
   $btnPausar.disabled = false;
   $btnReanudar.disabled = true;
@@ -35,7 +35,7 @@ $btnPausar.addEventListener("click", () => {
 });
 
 $btnReanudar.addEventListener("click", () => {
-  intervaloActualizacion = setInterval(cronometro, 10);
+  intervaloActualizacion = setInterval(cronometro, 1);
   $btnIniciar.disabled = true;
   $btnPausar.disabled = false;
   $btnReanudar.disabled = true;
@@ -59,35 +59,38 @@ $btnReiniciar.addEventListener("click", () => {
 });
 
 function cronometro() {
-  if (centesimas <= 99) {
+  if (centesimas <= 98) {
     centesimas++;
     if (centesimas < 10) {
       centesimas = "0" + centesimas;
     }
     $centesimaCronometro.textContent = centesimas;
   }
-  if (centesimas === 100) {
+  if (centesimas === 99) {
     segundos++;
-    centesimas = 0;
+    centesimas = "0" + 0;
     if (segundos < 10) {
       segundos = "0" + segundos;
     }
     $segundoCronometro.textContent = segundos;
+    $centesimaCronometro.textContent = centesimas;
   }
   if (segundos === 60) {
     minutos++;
-    segundos = 0;
+    segundos = "0" + 0;
     if (minutos < 10) {
       minutos = "0" + minutos;
     }
     $minutoCronometro.textContent = minutos;
+    $segundoCronometro.textContent = segundos;
   }
   if (minutos === 60) {
     horas++;
-    minutos = 0;
+    minutos = "0" + 0;
     if (horas < 10) {
       horas = "0" + horas;
     }
     $horaCronometro.textContent = horas;
+    $minutoCronometro.textContent = minutos;
   }
 }
